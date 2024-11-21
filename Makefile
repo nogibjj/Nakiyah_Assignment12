@@ -7,7 +7,8 @@ PORT ?= 5001
 
 # Build the Docker image
 build:
-	docker build -t $(IMAGE_NAME) .
+	docker build -t $(IMAGE_NAME):latest .
+
 
 # Run the Docker container
 # Forward $(PORT) on the host to port 5000 in the container
