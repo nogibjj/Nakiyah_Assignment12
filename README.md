@@ -33,7 +33,8 @@ Click here: [Docker Image](https://hub.docker.com/r/nakiyah24/nd191_assignment12
 
 
 ### CI/CD Integration
-This project uses a CI/CD pipeline to automate Docker image builds and deployments:
+This project uses a CI/CD pipeline to automate Docker image builds and deployments. To run the container locally, you can run the following command to build and run the image container:
+
 - Building the docker image
 
 `make build`
@@ -47,10 +48,6 @@ This project uses a CI/CD pipeline to automate Docker image builds and deploymen
 ![pushImage](/img/push.png)
 
 ## To run the container
-To run the container locally, you can either build the image yourself or pull it directly from Docker Hub.
-
-### Option 1: Build and Run Locally
-Use the following command to build and run the container:
 
 `make run`
 
@@ -59,10 +56,6 @@ Use the following command to build and run the container:
 Clicking on the button will display a list of selected countries and their current time:
 
 ![appImage1](/img/time1.png)
-
-### Option 2: Pull and Run from Docker Hub
-If you prefer to use the prebuilt image, pull it directly from Docker Hub and then run it:
-
 
 
 ## Deployment to Docker Hub
