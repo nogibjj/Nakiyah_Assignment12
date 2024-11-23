@@ -3,6 +3,7 @@
 [![Build and Push Docker Image](https://github.com/nogibjj/Nakiyah_Assignment12/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Nakiyah_Assignment12/actions/workflows/cicd.yml)
 
 ## File Structure
+```
 Nakiyah_Assignment12/
 │
 ├── .github/                
@@ -16,6 +17,8 @@ Nakiyah_Assignment12/
 ├── Dockerfile                    
 ├── requirements.txt              
 └── README.md                 
+```
+
 
 ## Project Overview
 This repository demonstrates a simple Python application built on flask that is containerized using Docker. The application is built, run, and managed using Docker commands and a CI/CD workflow to automate the build and push process to Docker Hub.
