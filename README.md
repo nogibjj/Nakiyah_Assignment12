@@ -36,19 +36,21 @@ Click here: [Docker Image](https://hub.docker.com/r/nakiyah24/nd191_assignment12
 This project uses a CI/CD pipeline to automate Docker image builds and deployments:
 - Building the docker image
 `make build`
-![buildImage]("img/build.png")
+
+![buildImage](/img/build.png)
 
 - Pushing the image to Docker Hub
 `make push`
-![buildImage]("img/push.png")
+
+![pushImage](/img/push.png)
 
 ## To run the container
 To run the container locally, use the following command:
 `make run`
-![appImage1]("img/time.png")
+![appImage1](/img/time.png)
 
 Clicking on the button will display a list of selected countries and their current time:
-![appImage1]("img/time1.png")
+![appImage1](/img/time1.png)
 
 ## Deployment to Docker Hub
 ### Manually
