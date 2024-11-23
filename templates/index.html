@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Time Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 60%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>World Time Checker</h1>
+    <button onclick="fetchTimes()">Check the time now</button>
+    <table>
+        <thead>
+            <tr>
+                <th>City</th>
+                <th>Current Time</th>
+                <th>Timezone</th> <!-- New column for Timezone -->
+            </tr>
+        </thead>
+        <tbody id="timeTable">
+            <!-- Dynamic content will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        function fetchTimes() {
+            fetch('/get_times')
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.getElementById("timeTable");
+                    tableBody.innerHTML = ""; // Clear previous data
+                    data.forEach(cityData => {
+                        const row = `<tr><td>${cityData.city}</td><td>${cityData.time}</td><td>${cityData.timezone}</td></tr>`;
+                        tableBody.innerHTML += row;
+                    });
+                })
+                .catch(error => console.error('Error fetching time data:', error));
+        }
+    </script>
+</body>
+</html>

@@ -3,7 +3,7 @@ IMAGE_NAME = nd191_assignment12
 DOCKER_ID_USER = nakiyah24
 
 # Default port if not set
-PORT ?= 5001
+PORT ?= 5005
 
 # Build the Docker image
 build:
